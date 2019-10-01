@@ -1,5 +1,9 @@
 package com.pojo;
 
+/**
+ * @author j.utekar
+ */
+
 public class Employee {
 
 	private Integer empId;
