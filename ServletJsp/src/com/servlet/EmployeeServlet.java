@@ -45,6 +45,7 @@ public class EmployeeServlet extends HttpServlet {
         if (action.equals("details")) {
             this.employeeList = this.employeeDaoImpl.getEmployees();
             this.session = request.getSession();
+            // set employee list to session
             this.session.setAttribute("empList", this.employeeList);
             response.sendRedirect("Employee.jsp");
         }
@@ -53,6 +54,7 @@ public class EmployeeServlet extends HttpServlet {
             final int empId = Integer.parseInt(request.getParameter("empId"));
             this.employee = this.employeeDaoImpl.getEmployeeById(empId);
             final HttpSession session = request.getSession();
+            // set employee object to session
             session.setAttribute("emp", this.employee);
             response.sendRedirect("updateEmployee.jsp");
         }

@@ -23,7 +23,9 @@ table {
 <body>
 <a href="employeeServlet?action=details"> Show Employees</a><br>
 	<center>
+	<!-- create employee registration form -->
 		<h1>Employee Registration Form</h1>
+		<!-- form action attribute specifies to which servlet the control should go and method attribute specifies the type of http method -->
 		<form action="employeeServlet" method="post">
 			<table border="1">
 				<tr>
@@ -53,8 +55,9 @@ table {
 				</tr>
 				<tr>
 					<td>
-					<td><input type="submit" value="Submit"> <input
-						type="hidden" name="action" value="addEmployee">
+					<td><input type="submit" value="Submit">
+					<!-- setting action for form -->
+					 <input type="hidden" name="action" value="addEmployee">
 			</table>
 		</form>
 	</center>

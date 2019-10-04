@@ -20,6 +20,7 @@ th {
 	<br>
 	<center>
 		<h2>Employee Info</h2>
+		<!--get employee list stored in session -->
 		<%
 			session = request.getSession();
 			List<Employee> empList = (List<Employee>) session.getAttribute("empList");
@@ -32,6 +33,7 @@ th {
 			<th>Location</th>
 			<th>Contact</th>
 			<th colspan="2">Action</th>
+			<!--iterate through list of employees and show data  -->
 				<%
 					for (Employee e : empList) {
 				%>
@@ -63,8 +65,10 @@ th {
 						out.print(e.getContact());
 					%>
 				</td>
+				<!--link to update employee-->
 				<td><a
 					href="employeeServlet?action=update&empId=<%=e.getEmpId()%>">Update</a></td>
+					<!--link to delete employee-->
 				<td><a
 					href="employeeServlet?action=delete&empId=<%=e.getEmpId()%>">Delete</a></td>
 			</tr>

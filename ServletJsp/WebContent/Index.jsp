@@ -7,8 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<!-- navigate to add employee page -->
 	<a href="AddEmployee.jsp"> Add Employees</a>
 	<br>
+	<!-- show all employees detail -->
 	<a href="employeeServlet?action=details"> Show Employees</a>
 </body>
 </html>

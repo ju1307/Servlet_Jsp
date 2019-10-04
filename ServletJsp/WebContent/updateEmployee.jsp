@@ -9,6 +9,7 @@
 </head>
 <body>
 <a href="employeeServlet?action=details"> Show Employees</a><br>
+	<!--get employee object stored in session -->
 	<%
 		Employee employee = (Employee) session.getAttribute("emp");
 	%>
